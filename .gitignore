@@ -2,7 +2,6 @@
 node_modules
 /dist
 
-back-end/images
 
 # local env files
 .env.local
