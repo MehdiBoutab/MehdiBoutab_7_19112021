@@ -1,0 +1,62 @@
+@media screen and (min-width: 1024px) {
+  .form1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form1 .newcomment {
+    width: 100%;
+  }
+  .form1 .newcomment #comment {
+    width: 98%;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 10px;
+    border: 1px solid #ff9d9d;
+    padding-left: 10px;
+  }
+  .form1 .submit {
+    width: 10% !important;
+    height: 20px !important;
+    border-radius: 15px !important;
+    border: black !important;
+    background-color: white !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+.form1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form1 .newcomment {
+  width: 98%;
+}
+
+.form1 .newcomment #comment {
+  width: 98%;
+  height: 40px;
+  margin-right: 10px;
+  border: 1px solid #0a0a0a;
+  padding-left: 10px;
+}
+
+.form1 .submit {
+  width: 100%;
+  height: 30px !important;
+  border-radius: 15px !important;
+  background-color: #fffefe !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black !important;
+  margin-top: 10px;
+  color: black;
+}
+
+.form1 .submit:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=newComment.css.map */

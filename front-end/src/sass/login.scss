@@ -1,0 +1,90 @@
+.form2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+  .formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #011627;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 20px;
+    padding-bottom: 35px;
+
+    .password {
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .login {
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      color: white;
+    }
+  }
+  button {
+    display: flex;
+    margin-top: 20px !important;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50% !important;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h2 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  input {
+    border: none;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 30px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .error {
+    margin-top: 20px;
+    color: white;
+  }
+}
+.cnx {
+  font-size: 25px;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .form2 {
+    display: inline;
+  }
+  .Group {
+    display: none;
+  }
+  h1 {
+    text-align: center;
+  }
+  .formulaire {
+    margin-top: 40px;
+  }
+}

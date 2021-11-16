@@ -1,0 +1,73 @@
+@media screen and (min-width: 1024px) {
+  body nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+  }
+  body nav .Groupomania {
+    width: 250px;
+    height: 200px;
+  }
+  body nav .links {
+    display: flex;
+    flex-direction: row;
+  }
+  body nav .links .cnx {
+    color: white;
+  }
+  body nav .links .cnx li {
+    margin-left: 15px;
+  }
+  body .container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .container .title h3 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.link {
+  padding: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  body nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+  }
+  body nav .Groupomania {
+    width: 250px;
+    height: 200px;
+  }
+  body nav .links {
+    display: flex;
+    flex-direction: column;
+  }
+  body nav .links li {
+    margin-left: 15px;
+  }
+  body .container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .container .title h2 {
+    width: auto;
+    font-size: medium;
+    display: block ruby;
+  }
+  body .container .title h3 {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=mainPage.css.map */

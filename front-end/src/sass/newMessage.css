@@ -1,0 +1,109 @@
+@media screen and (min-width: 1024px) {
+  .main .form1 {
+    display: inline-block;
+  }
+  .main .form1 .title {
+    display: flex;
+    justify-content: center;
+  }
+  .main .form1 input {
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ff9d9d;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+  .main .form1 textarea {
+    width: 500px;
+    height: 160px;
+    border-radius: 15px;
+    padding: 10px 0 0 15px;
+    border: 1px solid #ff9d9d;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .main .form1 .file {
+    padding-top: 10px;
+  }
+  .main .form1 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .main .form1 .btn .send {
+    width: 90px;
+    height: 30px !important;
+    border-radius: 20px;
+    border: 1px solid black !important;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+    color: black;
+    margin: 10px 0 0 20px;
+  }
+}
+
+.hero {
+  background-color: #011627 !important;
+  padding: 20px;
+}
+
+.main {
+  width: 60%;
+  margin: auto;
+}
+
+.main .form1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main .form1 .label-title {
+  width: 450px;
+  height: 50px;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-left: 15px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.main .form1 textarea {
+  width: 450px;
+  height: 160px;
+  border-radius: 0;
+  padding: 10px 0 0 15px;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main .form1 .file {
+  padding-top: 10px;
+  width: 350px;
+  margin-left: 0px;
+  border-radius: 0;
+}
+
+.main .form1 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.main .form1 .btn .send {
+  border: 1px solid black !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+  border-radius: 20px;
+}
+
+.main .form1 .btn .send:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=newMessage.css.map */

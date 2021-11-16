@@ -1,0 +1,46 @@
+.commentaire {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#comment-card {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px 0 20px 0;
+  background-color: #011627;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.F-comment {
+  color: black;
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+i {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: auto;
+}
+
+button .fa-trash-alt {
+  color: white;
+}
+
+button .fa-trash-alt:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=commentCard.css.map */

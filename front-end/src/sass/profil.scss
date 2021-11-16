@@ -1,0 +1,160 @@
+#nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 85px;
+  background-color: #011627;
+  .Groupomania {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profil {
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 45%;
+  padding-bottom: 20px;
+  background-color: #011627;
+
+  h2 {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modify {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 40px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+  }
+}
+
+.form-group {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+
+  #firstname,
+  #name {
+    height: 20px;
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .formulaire {
+    margin-top: 110px;
+  }
+
+  .btn {
+    margin-top: 105px;
+    margin-left: 20px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .deletebtn {
+    background-color: rgb(252, 246, 246) !important;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.link:hover {
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+.link {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  list-style: none;
+}
+
+@media screen and (max-width: 1800px) {
+  .form-group button {
+    width: 40%;
+  }
+
+  .fas {
+    margin-left: 20px;
+    width: 29px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    .formulaire {
+      margin-top: 0px;
+    }
+
+    .btn {
+      margin: 0px 0px 20px 0px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .modifybtn {
+      padding: 0px;
+    }
+
+    .deletebtn {
+      padding: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .profil {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 780px) {
+
+
+}
