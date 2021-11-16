@@ -1,4 +1,4 @@
-# Groupomania Corporate Social Network
+# Groupomania Social Network
 
 
 ## Stack
