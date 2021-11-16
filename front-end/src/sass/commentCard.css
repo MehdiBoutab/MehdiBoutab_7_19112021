@@ -43,4 +43,12 @@ button .fa-trash-alt {
 button .fa-trash-alt:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+  .commentaire {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
 /*# sourceMappingURL=commentCard.css.map */

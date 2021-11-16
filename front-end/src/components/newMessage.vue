@@ -3,20 +3,14 @@
     <form method="post" @submit.prevent="btnNewMessage" class="form1">
       <div class="title">
         <label for="title"></label>
-        <input
-          class="label-title"
-          type="title"
-          id="title"
-          placeholder="Titre"
-          v-model="title"
-        />
+        <input type="title" id="title" placeholder="Titre" v-model="title" />
       </div>
       <div>
         <label for="content"></label>
         <textarea
           type="text"
           id="content"
-          placeholder="Quoi de neuf ?" 
+          placeholder="Quoi de neuf ?"
           rows="5"
           cols="33"
           v-model="content"

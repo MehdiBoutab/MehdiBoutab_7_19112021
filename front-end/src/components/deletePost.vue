@@ -1,9 +1,10 @@
 <template>
   <div>
-    <button type="submit" @click.prevent="deleteMessage"><i class="fas fa-trash-alt"></i></button>
+    <button type="submit" @click.prevent="deleteMessage">
+      <i class="fas fa-trash-alt"></i>
+    </button>
   </div>
 </template>
-
 
 <script>
 import axios from "axios";

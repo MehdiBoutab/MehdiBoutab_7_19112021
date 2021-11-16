@@ -40,3 +40,12 @@ button {
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .commentaire {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+}
