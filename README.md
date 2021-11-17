@@ -29,6 +29,7 @@ Features
 * Allez dans le fichier config, puis config.json et dans .env
 
 
+
 renseignez les identifiants:
 * host
 * user
