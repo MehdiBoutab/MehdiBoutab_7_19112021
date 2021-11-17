@@ -1,6 +1,5 @@
 # Groupomania Social Network
 
-
 ## Stack
 
 Frontend :
