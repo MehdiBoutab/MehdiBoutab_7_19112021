@@ -2,8 +2,10 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const models = require("../models");
 
-const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!.@#$%^&*])(?=.{8,})/;
+const EMAIL_REGEX =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const PASSWORD_REGEX =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!.@#$%^&*])(?=.{8,})/;
 
 exports.signup = (req, res, next) => {
   if (
@@ -26,26 +28,40 @@ exports.signup = (req, res, next) => {
     });
   }
 
-  bcrypt
-    .hash(req.body.password, 10)
-    .then((hash) => {
-      const user = models.User.create({
-        email: req.body.email,
-        name: req.body.name,
-        firstname: req.body.firstname,
-        password: hash,
-        isAdmin: false,
-      })
-        .then((user) => {
-          res.status(201).json({
-            userId: user.id,
-            isAdmin: user.isAdmin,
-          });
-        })
-        .then(() => res.status(201).json({ message: "Utilisateur créé !" }))
-        .catch((error) => res.status(400).json({ error: error }));
+  models.User.findOne({
+    where: {
+      email: req.body.email,
+    },
+  })
+    .then((user) => {
+      if (!user) {
+        bcrypt
+          .hash(req.body.password, 10)
+          .then((hash) => {
+            const user = models.User.create({
+              email: req.body.email,
+              name: req.body.name,
+              firstname: req.body.firstname,
+              password: hash,
+              isAdmin: false,
+            })
+              .then((user) => {
+                res.status(201).json({
+                  userId: user.id,
+                  isAdmin: user.isAdmin,
+                });
+              })
+              .then(() =>
+                res.status(201).json({ message: "Utilisateur créé !" })
+              )
+              .catch((error) => res.status(400).json({ error: error }));
+          })
+          .catch((error) => res.status(500).json({ error: error }));
+      } else {
+        return res.status(409).json({ error: "Cet utilisateur existe déjà !" });
+      }
     })
-    .catch((error) => res.status(500).json({ error: error }));
+    .catch((error) => res.status(500).json({ error }));
 };
 
 exports.login = (req, res, next) => {
@@ -74,9 +90,13 @@ exports.login = (req, res, next) => {
             userId: user.id,
             name: user.name,
             firstname: user.firstname,
-            token: jwt.sign({ userId: user.id, isAdmin: user.isAdmin }, "RANDOM_TOKEN_SECRET", {
-              expiresIn: "24h",
-            }),
+            token: jwt.sign(
+              { userId: user.id, isAdmin: user.isAdmin },
+              "RANDOM_TOKEN_SECRET",
+              {
+                expiresIn: "24h",
+              }
+            ),
           });
         })
         .catch((error) => res.status(500).json({ error }));

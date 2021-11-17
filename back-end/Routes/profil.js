@@ -3,7 +3,6 @@ const router = express.Router();
 const profileCtrl = require("../controllers/profil");
 const auth = require("../Middlewar/auth");
 
-
 router.get("/profile/:id", auth, profileCtrl.getOneProfile);
 router.get("/profile/:id/messages", auth, profileCtrl.getAllMessagesProfile);
 router.put("/profile/:id", auth, profileCtrl.modifyProfile);
